@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="NOMAD BOX — Монгол дахь өдөр тутмын хэрэгцээний сонирхолтой бараа, дизайн үйлчилгээний танилцуулга каталог.">
+<title>NOMAD BOX — Жижиг зүйлс. Том санаа.</title>
+<style>
+:root{--ink:#17251f;--muted:#64736c;--bg:#f6f7f2;--card:#fff;--green:#1d5945;--lime:#d7f36b;--line:#e4e9e1;--peach:#f5d6c5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{max-width:1100px;margin:auto;padding:0 22px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}.logo{font-weight:900;letter-spacing:-1px;font-size:22px}.logo span{color:var(--green)}.navlinks{display:flex;gap:20px;font-size:14px;color:var(--muted)}
+.hero{background:var(--green);color:#fff;border-radius:28px;padding:54px 48px;display:grid;grid-template-columns:1.25fr .75fr;gap:20px;align-items:center;overflow:hidden;position:relative}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--lime);font-weight:800}.hero h1{font-size:clamp(38px,6vw,66px);line-height:.98;letter-spacing:-3px;margin:18px 0}.hero p{font-size:16px;line-height:1.65;color:#dce9e1;max-width:500px}.cta{display:inline-block;background:var(--lime);color:var(--ink);font-weight:800;padding:14px 20px;border-radius:999px;margin-top:12px}.orb{min-height:250px;display:grid;place-items:center;position:relative}.orb .circle{width:230px;height:230px;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:var(--green);font-size:76px;transform:rotate(-8deg);box-shadow:18px 20px 0 rgba(0,0,0,.12)}.orb .tag{position:absolute;right:0;bottom:25px;background:var(--peach);color:var(--ink);padding:13px 17px;border-radius:15px;font-weight:800;transform:rotate(5deg)}
+section{padding:52px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:22px}.section-head h2{font-size:32px;letter-spacing:-1px;margin:0}.section-head p{color:var(--muted);max-width:440px;line-height:1.5;margin:0;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}.art{height:190px;display:grid;place-items:center;font-size:70px;position:relative}.art small{position:absolute;left:14px;top:14px;font-size:11px;font-weight:800;background:#fff;padding:7px 10px;border-radius:20px;color:var(--green)}.a1{background:#e7e9fc}.a2{background:#f4dfd1}.a3{background:#dcebdc}.a4{background:#f7edc5}.a5{background:#d8e8ed}.a6{background:#eee0f1}.details{padding:17px}.details h3{margin:0 0 7px;font-size:17px}.details p{margin:0;color:var(--muted);font-size:13px;line-height:1.5;min-height:39px}.bottom{display:flex;justify-content:space-between;align-items:center;margin-top:16px;gap:8px}.price{font-weight:800;font-size:13px}.ask{border:0;background:var(--green);color:#fff;padding:10px 12px;border-radius:999px;font-weight:700;cursor:pointer;font-size:12px}
+.note{background:#fff;border:1px solid var(--line);padding:18px 20px;border-radius:16px;color:var(--muted);font-size:13px;line-height:1.6;margin-top:18px}.note strong{color:var(--ink)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}.num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--lime);font-weight:900}.step h3{font-size:17px;margin:16px 0 8px}.step p{color:var(--muted);font-size:14px;line-height:1.6;margin:0}
+.contact{background:#e8eddf;border-radius:24px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.contact h2{font-size:30px;letter-spacing:-1px;margin:0 0 10px}.contact p{color:var(--muted);line-height:1.6;font-size:14px}.form{display:grid;gap:10px}.form input,.form select,.form textarea{width:100%;padding:13px 14px;border:1px solid #d4ddcf;border-radius:12px;background:#fff;color:var(--ink)}.form button{border:0;background:var(--green);color:#fff;padding:14px;border-radius:12px;font-weight:800;cursor:pointer}.form .hint{font-size:12px;color:var(--muted);line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+footer{padding:28px 0 36px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:34px 25px}.orb{min-height:180px}.orb .circle{width:160px;height:160px;font-size:55px}.orb .tag{right:8%;bottom:8px}.navlinks{gap:12px;font-size:12px}.grid{grid-template-columns:repeat(2,1fr)}.art{height:150px}.section-head{align-items:start;flex-direction:column}.steps{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}}
+@media(max-width:430px){.wrap{padding:0 14px}.grid{grid-template-columns:1fr 1fr;gap:10px}.details{padding:12px}.details h3{font-size:14px}.details p{font-size:12px}.bottom{align-items:start;flex-direction:column}.ask{width:100%}.art{height:130px;font-size:54px}.navlinks a:nth-child(2){display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="#">NOMAD<span>BOX.</span></a><div class="navlinks"><a href="#catalog">Барааны каталог</a><a href="#how">Хэрхэн захиалах вэ?</a><a href="#contact">Холбоо барих</a></div></nav>
+<header class="hero">
+<div><div class="eyebrow">Сонирхолтой сонголтууд • Монгол</div><h1>Жижиг зүйлс.<br>Том санаа.</h1><p>Өдөр тутмын хэрэглээний хэрэгтэй дагалдах хэрэгсэл, гэр ахуйн жижиг бараа, загварын үйлчилгээний санаануудыг нэг дороос сонирхоорой.</p><a class="cta" href="#catalog">Бараа үзэх ↓</a></div>
+<div class="orb" aria-hidden="true"><div class="circle">✦</div><div class="tag">Чиний сонголт.<br>Чиний хэв маяг.</div></div>
+</header>
+<section id="catalog">
+<div class="section-head"><h2>Сонголтоо хийгээрэй</h2><p>Эдгээр нь эхний каталогийн ангиллууд юм. Барааны үнэ, нөөц болон хүргэлтийг захиалга баталгаажуулахаас өмнө тодруулна.</p></div>
+<div class="grid">
+<article class="product"><div class="art a1"><small>ДАГАЛДАХ ХЭРЭГСЭЛ</small>📱</div><div class="details"><h3>Утасны дагалдах хэрэгсэл</h3><p>Утасны гэр, суурь болон кабелийн зохион байгуулагч.</p><div class="bottom"><span class="price">Үнэ лавлах</span><button class="ask" data-item="Утасны дагалдах хэрэгсэл">Үнэ лавлах</button></div></div></article>
+<article class="product"><div class="art a2"><small>ГЭР АХУЙ</small>🧺</div><div class="details"><h3>Эмх цэгцийн хэрэгсэл</h3><p>Ширээ, тавиур болон жижиг зүйлс хадгалах хэрэгсэл.</p><div class="bottom"><span class="price">Үнэ лавлах</span><button class="ask" data-item="Эмх цэгцийн хэрэгсэл">Үнэ лавлах</button></div></div></article>
+<article class="product"><div class="art a3"><small>ХИЧЭЭЛ</small>✏️</div><div class="details"><h3>Хичээлийн хэрэгсэл</h3><p>Дэвтэр, үзэгний сав болон хичээлд хэрэгтэй зүйлс.</p><div class="bottom"><span class="price">Үнэ лавлах</span><button class="ask" data-item="Хичээлийн хэрэгсэл">Үнэ лавлах</button></div></div></article>
+<article class="product"><div class="art a4"><small>ХЭВ МАЯГ</small>🧢</div><div class="details"><h3>Загварын жижиг хэрэгсэл</h3><p>Өдөр тутмын хувцаслалтад тохирох дагалдах хэрэгсэл.</p><div class="bottom"><span class="price">Үнэ лавлах</span><button class="ask" data-item="Загварын жижиг хэрэгсэл">Үнэ лавлах</button></div></div></article>
+<article class="product"><div class="art a5"><small>ГАДЖЕТ</small>🎧</div><div class="details"><h3>Төхөөрөмжийн хэрэгсэл</h3><p>Утасны суурь, кабель тогтоогч болон гэр.</p><div class="bottom"><span class="price">Үнэ лавлах</span><button class="ask" data-item="Төхөөрөмжийн хэрэгсэл">Үнэ лавлах</button></div></div></article>
+<article class="product"><div class="art a6"><small>ДИЗАЙН</small>🎨</div><div class="details"><h3>Постер, дизайн үйлчилгээ</h3><p>Захиалгат постер болон сурталчилгааны энгийн загвар.</p><div class="bottom"><span class="price">Үнэ лавлах</span><button class="ask" data-item="Постер, дизайн үйлчилгээ">Үнэ лавлах</button></div></div></article>
+</div>
+<div class="note"><strong>Анхааруулга:</strong> Одоогоор бараа нөөцөлж аваагүй. Төлбөр хийхээс өмнө барааны бэлэн байдал, эцсийн үнэ, хүргэлтийн хугацаа, буцаалтын нөхцөлийг баталгаажуулна уу.</div>
+</section>
+<section id="how"><div class="section-head"><h2>Хэрхэн захиалах вэ?</h2><p>Бүх нөхцөлийг урьдчилан тохиролцож, захиалгаа баталгаажуулна.</p></div>
+<div class="steps">
+<div class="step"><div class="num">1</div><h3>Бараагаа сонгох</h3><p>Сонирхож буй бараа эсвэл үйлчилгээгээ сонгоод хүсэлтээ бичээрэй.</p></div>
+<div class="step"><div class="num">2</div><h3>Мэдээллээ тодруулах</h3><p>Нийлүүлэгчээс барааны бэлэн байдал, үнэ, хүргэлтийн зардал болон хугацааг тодруулна.</p></div>
+<div class="step"><div class="num">3</div><h3>Захиалгаа баталгаажуулах</h3><p>Төлбөр болон хүргэлтийн нөхцөлийг тохиролцсоны дараа захиалгыг баталгаажуулна.</p></div>
+</div></section>
+<section id="contact"><div class="contact"><div><div class="eyebrow" style="color:var(--green)">Сонирхож байна уу?</div><h2>Юу хайж байгаагаа бичээрэй.</h2><p>Доорх хэсгийг ашиглан хүсэлтийн текст бэлдэж болно. Бодит хүсэлт хүлээн авахын тулд сайтын эзэн имэйл эсвэл онлайн маягт холбох шаардлагатай.</p></div>
+<form class="form" id="requestForm"><input id="customer" placeholder="Таны нэр (заавал биш)" maxlength="60"><select id="item"><option>Утасны дагалдах хэрэгсэл</option><option>Эмх цэгцийн хэрэгсэл</option><option>Хичээлийн хэрэгсэл</option><option>Загварын жижиг хэрэгсэл</option><option>Төхөөрөмжийн хэрэгсэл</option><option>Постер, дизайн үйлчилгээ</option><option>Бусад бараа</option></select><textarea id="message" rows="3" placeholder="Ямар бараа хайж байна вэ? (заавал биш)" maxlength="400"></textarea><button type="submit">Хүсэлтийн текст бэлдэх</button><div class="hint" id="result">Энэ бол демо маягт. Одоогоор мэдээллийг дэлгүүрийн эзэнд автоматаар илгээхгүй.</div></form>
+</div></section>
+<footer><span>© NOMAD BOX — эхлэлийн загвар сайт</span><span>Үнэ, нөөц болон хүргэлтийг захиалгаас өмнө тодруулна.</span></footer>
+</div>
+<script>
+document.querySelectorAll('[data-item]').forEach(b=>b.addEventListener('click',()=>{document.getElementById('item').value=b.dataset.item;document.getElementById('contact').scrollIntoView({behavior:'smooth'});document.getElementById('message').focus()}));
+document.getElementById('requestForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('customer').value.trim()||'Тодорхойгүй';const item=document.getElementById('item').value;const msg=document.getElementById('message').value.trim()||'Нэмэлт мэдээлэл алга';const txt=`NOMAD BOX — Захиалгын хүсэлт\nНэр: ${name}\nАнгилал: ${item}\nТайлбар: ${msg}\n\nЭнэ бол демо хүсэлт. Сайтын эзний имэйл эсвэл бодит маягтыг холбох шаардлагатай.`;const result=document.getElementById('result');result.textContent=txt;const blob=new Blob([txt],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='nomad-box-zahialgiin-huselt.txt';a.click();URL.revokeObjectURL(url);});
+</script>
+</body>
+</html>
